@@ -1,0 +1,104 @@
+:root {
+  --PrimaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 100%, 100%);
+  --blackColor: hsl(0, 0, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDeam: hsl(0, 0, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 197%);
+}
+
+.footer {
+  background-color: var(--greyBg);
+  padding: 2rem 0;
+  .secContainer {
+    gap: 1.5rem;
+    text-align: center;
+    .footerLogo {
+      padding-bottom: 0.5rem;
+      .logo {
+        color: var(--blackColor);
+        font-weight: 500;
+        justify-content: center;
+        text-align: center;
+        cursor: pointer;
+        .icon {
+          color: var(--PrimaryColor);
+          margin-right: 0.5rem;
+        }
+      }
+    }
+    .socials {
+      gap: 0.5rem;
+      margin: auto;
+      justify-content: center;
+      .icon {
+        font-size: 30px;
+        color: var(--whiteColor);
+        background-color: var(--PrimaryColor);
+        padding: 8px;
+        border-radius: 50%;
+        &:hover {
+          background-color: var(--blackColor);
+        }
+      }
+    }
+    .footerLinks {
+      display: grid;
+      gap: 0.2rem;
+      .linkTitle {
+        padding-bottom: 0.5rem;
+        color: var(--blackColor);
+        font-weight: 700;
+      }
+      li {
+        &:hover {
+          transform: translateX(10px);
+          a {
+            color: var(--PrimaryColor);
+          }
+        }
+      }
+      a,
+      .phone,
+      .email {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--textColor);
+      }
+    }
+  }
+}
+
+/* MEDIA QUERIES =======================>  */
+
+@media screen and (min-width: 576px) {
+  .footer {
+    .secContainer {
+      grid-template-columns: repeat(2, 1fr);
+      text-align: center;
+      align-items: flex-start;
+      .footerLinks {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .footer {
+    .secContainer {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .footer {
+    .secContainer {
+      padding: 2rem;
+    }
+  }
+}

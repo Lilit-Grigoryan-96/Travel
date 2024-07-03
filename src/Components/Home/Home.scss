@@ -1,0 +1,143 @@
+:root {
+  --PrimaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 100%, 100%);
+  --blackColor: hsl(0, 0, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDeam: hsl(0, 0, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 197%);
+}
+.home {
+  height: 50vh;
+  background: linear-gradient(rgba(33, 33, 33, 0.5), rgba(33, 33, 33, 0.5)),
+    url(../../Assets/popular2.jpg);
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .secContainer {
+    .homeText {
+      text-align: center;
+      .title {
+        color: var(--whiteColor);
+        font-size: 2rem;
+        font-weight: 700;
+        line-height: 2.5rem;
+      }
+      .subTitle {
+        color: var(--whiteColor);
+        opacity: 0.9;
+        font-size: 13px;
+        font-weight: 300;
+        text-align: center;
+        max-width: 70%;
+        margin: auto;
+        padding: 1rem 0;
+      }
+      .btn {
+        padding: 0.5rem 1.5rem;
+      }
+    }
+    .homeCard {
+      position: absolute;
+      left: 50%;
+      bottom: -40%;
+      transform: translate(-50%);
+      width: 80%;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+      justify-content: center;
+      padding: 2rem;
+      border-radius: 1rem;
+      background-color: var(--whiteColor);
+      box-shadow: 0 2px 8px 4px rgba(178, 178, 178, 0.45);
+      .locationDiv,
+      .distDiv,
+      .priceDiv {
+        width: 100%;
+        label {
+          display: block;
+          color: var(--textColor);
+          font-size: 13px;
+          font-weight: 500;
+          padding-bottom: 0.4rem;
+        }
+        input {
+          width: 100%;
+          padding: 10px 0;
+          background: var(--inputColor);
+          border: none;
+          border-radius: 10px;
+          font-size: 13px;
+          font-weight: 500;
+          &::placeholder {
+            font-size: 13px;
+            font-weight: 400;
+            opacity: 0.5;
+          }
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+}
+
+/* MEDIA QUERIES =======================>  */
+
+@media screen and (min-width: 576px) {
+  .home {
+    .secContainer {
+      .homeText {
+        .title {
+          font-size: 2.5rem;
+        }
+        .subTitle {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .home {
+    .secContainer {
+      .homeCard {
+        bottom: -10%;
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .homeText {
+        .title {
+          font-size: 3.5rem;
+          line-height: 4rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home {
+    .secContainer {
+      .homeText {
+        .subTitle {
+          font-size: 20px;
+        }
+      }
+      .homeCard {
+        width: 70%;
+      }
+    }
+  }
+}

@@ -1,0 +1,162 @@
+:root {
+  --PrimaryColor: hsl(26, 93%, 50%);
+  --HoverColor: hsl(26, 90%, 42%);
+  --whiteColor: hsl(0, 100%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --textColor: hsl(240, 1%, 48%);
+  --whiteColorDeam: hsl(0, 0, 93%);
+  --greyBg: hsl(0, 0%, 96%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: hsl(330, 12%, 197%);
+}
+
+.section.popular {
+  padding-top: 15rem;
+}
+.section.popular .secContainer .secHeader {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.section.popular .secContainer .secHeader .textDiv .secTitle {
+  color: var(--blackColor);
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+.section.popular .secContainer .secHeader .textDiv p {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--textColor);
+}
+.section.popular .secContainer .secHeader .iconsDiv {
+  gap: 0.5rem;
+}
+.section.popular .secContainer .secHeader .iconsDiv .icon {
+  font-size: 2.5rem;
+  padding: 0.5rem;
+  background-color: var(--greyText);
+  border-radius: 50%;
+}
+.section.popular .secContainer .secHeader .iconsDiv .icon:hover {
+  background-color: var(--PrimaryColor);
+  color: var(--whiteColor);
+  transition: 0.3s ease;
+}
+.section.popular .secContainer .mainContent {
+  padding: 2rem 0;
+  gap: 1rem;
+}
+.section.popular .secContainer .mainContent .singleDestination {
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px 2px rgba(178, 178, 178, 0.3);
+}
+.section.popular .secContainer .mainContent .singleDestination .destImage {
+  height: 200px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.section.popular .secContainer .mainContent .singleDestination .destImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.section.popular .secContainer .mainContent .singleDestination .destImage .overlayInfo {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0;
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7));
+  overflow: hidden;
+}
+.section.popular .secContainer .mainContent .singleDestination .destImage .overlayInfo h3 {
+  color: var(--whiteColor);
+  font-weight: 600;
+}
+.section.popular .secContainer .mainContent .singleDestination .destImage .overlayInfo p {
+  color: var(--whiteColor);
+  opacity: 0.8;
+  font-size: 13px;
+}
+.section.popular .secContainer .mainContent .singleDestination .destImage .overlayInfo .icon {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 0.5rem;
+  color: var(--whiteColor);
+  background-color: var(--PrimaryColor);
+  font-size: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  transition: 0.1s ease;
+}
+.section.popular .secContainer .mainContent .singleDestination .destImage .overlayInfo .icon:hover {
+  background-color: transparent;
+  border-color: var(--PrimaryColor);
+  color: var(--PrimaryColor);
+}
+.section.popular .secContainer .mainContent .singleDestination:hover .overlayInfo {
+  overflow: visible;
+  padding: 1rem 1.5rem;
+  height: 100%;
+}
+.section.popular .secContainer .mainContent .destFooter {
+  padding: 1rem;
+}
+.section.popular .secContainer .mainContent .destFooter .number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--blackColor);
+  position: relative;
+  max-width: -moz-max-content;
+  max-width: max-content;
+}
+.section.popular .secContainer .mainContent .destFooter .number::after {
+  content: "";
+  position: absolute;
+  background-color: var(--PrimaryColor);
+  top: 45%;
+  right: -150%;
+  height: 5px;
+  width: 45px;
+  border-radius: 1rem;
+}
+
+/* MEDIA QUERIES =======================>  */
+@media screen and (min-width: 576px) {
+  .section.popular {
+    padding-top: 10rem;
+  }
+  .section.popular .secContainer .secHeader {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section.popular .secContainer .secHeader .textDiv {
+    max-width: 70%;
+    text-align: start;
+  }
+  .section.popular .secContainer .secHeader .iconsDiv {
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .popular .secContainer .secHeader .textDiv .secTitle {
+    font-size: 2.2rem;
+  }
+  .popular .secContainer .secHeader p {
+    font-size: 15px;
+  }
+  .popular .secContainer .mainContent {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}/*# sourceMappingURL=Popular.css.map */
